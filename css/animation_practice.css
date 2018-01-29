@@ -1,0 +1,80 @@
+html,body {
+	width: 100%;
+	height: 100%;
+}
+
+#grid_container {
+	width: 300px;
+	height: 100px;
+	position: relative;
+	left: 50%;
+	top: 48%;
+	margin-top: -50px;
+	margin-left: -100px;
+}
+.mono {
+	font-family: 'Fjalla One';
+	font-size: 6em;
+	float: left;
+	margin-left: 5px;
+}
+
+@keyframes t_move{
+	0% {right:0px;}
+	50% { right:-350px;}
+	100% {right: -148px; color: yellow;}
+}
+
+#t{
+	position: relative;
+	animation: t_move 5s cubic-bezier(1,0,0,1);
+	animation-fill-mode: forwards;
+}
+
+@keyframes a_rotate{
+	0% { transform: rotate(0deg); left: 0px;}
+	100% {transform: rotate(360deg); left: 50px; color:yellow;}
+}
+#a{
+	position: relative;
+	transform-origin: 100% 100%;
+	animation: a_rotate 4s linear;
+	animation-fill-mode: forwards;
+}
+
+@keyframes s_move{
+	0% { top:0px; right:0px;}
+	25% { top:-150px; right:0px;}
+	50% { top:-150px; right:100px;}
+	75% { top:-150px; right:100px;}
+	100% { top:0px; right: 100px; color:yellow;}
+}
+#s{
+	position: relative;
+	animation: s_move 5s cubic-bezier(1,0,0,1);
+	animation-fill-mode: forwards;
+}
+
+@keyframes t2_move{
+	0% {left:0px;}
+	50% { left:-550px;}
+	100% {left: -100px;color: yellow;}
+}
+#t2{
+	position:relative;
+	animation: t2_move 5s cubic-bezier(1,0,0,1);
+	animation-fill-mode: forwards;
+}
+
+@keyframes e_move{
+	0% {top:0px;}
+	25% {top: 100px;}
+	50% {top:-550px;}
+	75% {top: 100px;}
+	100% {top:0px; color: yellow;}
+}
+#e{
+	position:relative;
+	animation:e_move 5s cubic-bezier(1,0,0,1);
+	animation-fill-mode: forwards;
+}
